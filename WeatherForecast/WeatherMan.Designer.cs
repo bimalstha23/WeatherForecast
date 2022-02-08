@@ -44,7 +44,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblCountry = new System.Windows.Forms.Label();
             this.lblTemp = new System.Windows.Forms.Label();
-            this.humiditybar = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.currentweathericon = new System.Windows.Forms.PictureBox();
             this.panelinfo = new System.Windows.Forms.Panel();
@@ -59,9 +58,7 @@
             this.Logotitle = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.settings1 = new WeatherForecast.Settings();
-            this.calender1 = new WeatherForecast.Calender();
-            this.mainDashBoard1 = new WeatherForecast.mainDashBoard();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentweathericon)).BeginInit();
             this.panelinfo.SuspendLayout();
@@ -203,19 +200,6 @@
             this.lblTemp.TabIndex = 0;
             this.lblTemp.Text = "N/A°";
             // 
-            // humiditybar
-            // 
-            this.humiditybar.BorderColor = System.Drawing.Color.Transparent;
-            this.humiditybar.BorderRadius = 3;
-            this.humiditybar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(255)))), ((int)(((byte)(168)))));
-            this.humiditybar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.humiditybar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(255)))), ((int)(((byte)(168)))));
-            this.humiditybar.Location = new System.Drawing.Point(6, 231);
-            this.humiditybar.Name = "humiditybar";
-            this.humiditybar.Size = new System.Drawing.Size(140, 5);
-            this.humiditybar.TabIndex = 27;
-            this.humiditybar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.datetxt);
@@ -251,7 +235,6 @@
             this.panelinfo.Controls.Add(this.lblCountry);
             this.panelinfo.Controls.Add(this.lblCityname);
             this.panelinfo.Controls.Add(this.lblTemp);
-            this.panelinfo.Controls.Add(this.humiditybar);
             this.panelinfo.Controls.Add(this.panel2);
             this.panelinfo.Controls.Add(this.lblTempstatus);
             this.panelinfo.Location = new System.Drawing.Point(12, 299);
@@ -400,38 +383,20 @@
             this.panel3.Size = new System.Drawing.Size(860, 17);
             this.panel3.TabIndex = 30;
             // 
-            // settings1
+            // panelContainer
             // 
-            this.settings1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.settings1.Location = new System.Drawing.Point(195, 17);
-            this.settings1.Name = "settings1";
-            this.settings1.Size = new System.Drawing.Size(860, 583);
-            this.settings1.TabIndex = 31;
-            // 
-            // calender1
-            // 
-            this.calender1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calender1.Location = new System.Drawing.Point(195, 17);
-            this.calender1.Name = "calender1";
-            this.calender1.Size = new System.Drawing.Size(860, 583);
-            this.calender1.TabIndex = 32;
-            // 
-            // mainDashBoard1
-            // 
-            this.mainDashBoard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainDashBoard1.Location = new System.Drawing.Point(195, 17);
-            this.mainDashBoard1.Name = "mainDashBoard1";
-            this.mainDashBoard1.Size = new System.Drawing.Size(860, 583);
-            this.mainDashBoard1.TabIndex = 33;
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(195, 17);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(860, 583);
+            this.panelContainer.TabIndex = 31;
             // 
             // WeatherMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 600);
-            this.Controls.Add(this.mainDashBoard1);
-            this.Controls.Add(this.calender1);
-            this.Controls.Add(this.settings1);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -468,7 +433,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblCountry;
         private System.Windows.Forms.Label lblTemp;
-        private Guna.UI2.WinForms.Guna2ProgressBar humiditybar;
+        //private Guna.UI2.WinForms.Guna2ProgressBar humiditybar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox currentweathericon;
         private System.Windows.Forms.Panel panelinfo;
@@ -482,10 +447,8 @@
         private System.Windows.Forms.Label Logotitle;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
-        private Settings settings1;
-        private Calender calender1;
-        private mainDashBoard mainDashBoard1;
         private System.Windows.Forms.Panel activeContainerPanel;
+        private System.Windows.Forms.Panel panelContainer;
     }
 }
 

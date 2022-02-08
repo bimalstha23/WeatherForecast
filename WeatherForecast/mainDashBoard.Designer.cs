@@ -81,6 +81,8 @@
             this.titlelbl = new System.Windows.Forms.Label();
             this.searchbtn = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon8)).BeginInit();
             this.fifthPanel.SuspendLayout();
@@ -153,7 +155,7 @@
             // 
             this.fifthPanel.Controls.Add(this.guna2PictureBox5);
             this.fifthPanel.Controls.Add(this.label8);
-            this.fifthPanel.Location = new System.Drawing.Point(700, 90);
+            this.fifthPanel.Location = new System.Drawing.Point(680, 90);
             this.fifthPanel.Name = "fifthPanel";
             this.fifthPanel.Size = new System.Drawing.Size(133, 100);
             this.fifthPanel.TabIndex = 46;
@@ -170,6 +172,7 @@
             this.guna2PictureBox5.Size = new System.Drawing.Size(133, 86);
             this.guna2PictureBox5.TabIndex = 24;
             this.guna2PictureBox5.TabStop = false;
+            this.guna2PictureBox5.Click += new System.EventHandler(this.guna2PictureBox5_Click);
             // 
             // label8
             // 
@@ -185,7 +188,7 @@
             // 
             this.fourthPanel.Controls.Add(this.guna2PictureBox4);
             this.fourthPanel.Controls.Add(this.label5);
-            this.fourthPanel.Location = new System.Drawing.Point(532, 87);
+            this.fourthPanel.Location = new System.Drawing.Point(511, 87);
             this.fourthPanel.Name = "fourthPanel";
             this.fourthPanel.Size = new System.Drawing.Size(133, 100);
             this.fourthPanel.TabIndex = 45;
@@ -202,6 +205,7 @@
             this.guna2PictureBox4.Size = new System.Drawing.Size(133, 86);
             this.guna2PictureBox4.TabIndex = 13;
             this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
             // 
             // label5
             // 
@@ -235,6 +239,7 @@
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 12;
             this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
             // 
             // label4
             // 
@@ -268,6 +273,7 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 11;
             this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
             // label3
             // 
@@ -305,6 +311,7 @@
             this.guna2PictureBox1.TabIndex = 10;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.WaitOnLoad = true;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // label1
             // 
@@ -652,6 +659,7 @@
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(35, 28);
             this.searchbtn.TabIndex = 30;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
             // 
             // txtSearch
             // 
@@ -667,10 +675,30 @@
             this.txtSearch.Size = new System.Drawing.Size(484, 26);
             this.txtSearch.TabIndex = 29;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(328, 385);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "label2";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(477, 407);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "label6";
+            // 
             // mainDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel8);
             this.Controls.Add(this.fifthPanel);
             this.Controls.Add(this.fourthPanel);
@@ -691,6 +719,7 @@
             this.Controls.Add(this.txtSearch);
             this.Name = "mainDashBoard";
             this.Size = new System.Drawing.Size(865, 603);
+            this.Load += new System.EventHandler(this.mainDashBoard_Load);
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon8)).EndInit();
@@ -789,5 +818,7 @@
         private System.Windows.Forms.Label titlelbl;
         private Guna.UI2.WinForms.Guna2Button searchbtn;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
     }
 }

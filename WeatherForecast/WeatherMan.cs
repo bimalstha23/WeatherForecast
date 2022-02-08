@@ -17,35 +17,49 @@ namespace WeatherForecast
     {
         public string APIkey = "c3cf60022dfe56ff49aa0a20ec89558f";
 
-        public static double deviceLon;
-        public static double deviceLat;
+        public  double deviceLon;
+        public  double deviceLat;
+        public string deviceLocation;
         private GeoCoordinateWatcher Watcher = null;
         public WeatherMan()
         {
             InitializeComponent();
+            mainDashBoard dashBoard = new mainDashBoard();
+            addUserControl(dashBoard);
             activeContainerPanel.Height = btndashboard.Height;
-            mainDashBoard1.BringToFront();
+            
         }
-
+        private void addUserControl(UserControl userControl)
+        {   userControl.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
         private void btndashboard_Click(object sender, EventArgs e)
         {
             activeContainerPanel.Height = btndashboard.Height;
-            mainDashBoard1.BringToFront();
+            
             activeContainerPanel.Top = btndashboard.Top;
+            mainDashBoard dashBoard = new mainDashBoard();
+            addUserControl(dashBoard);
         }
 
         private void btnCalender_Click(object sender, EventArgs e)
         {
             activeContainerPanel.Height = btnCalender.Height;
-            calender1.BringToFront();
+            
             activeContainerPanel.Top = btnCalender.Top;
+            Calender calender = new Calender();
+            addUserControl(calender);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             activeContainerPanel.Height = button3.Height;
-            settings1.BringToFront();
+            
             activeContainerPanel.Top = button3.Top;
+            Settings settings = new Settings();
+            addUserControl(settings);
         }
         void gettime()
         {
@@ -78,7 +92,7 @@ namespace WeatherForecast
                 }
             }
         }
-        void updateweather(double Lat, double Lon)
+        void updateweather(double Lon, double Lat)
         {
 
             using (WebClient web = new WebClient())
@@ -94,6 +108,7 @@ namespace WeatherForecast
                 lblCityname.Text = Info.name;
                 lblPressure.Text = Info.main.pressure.ToString();
                 lblWindspeed.Text = Info.wind.speed.ToString();
+                deviceLocation = Info.name;
             }
         }
 
@@ -105,13 +120,13 @@ namespace WeatherForecast
 
             // Start the watcher.
             Watcher.Start();
-            updateweather(deviceLat, deviceLon);
+            updateweather(deviceLon, deviceLat);
             timer1.Start();
         }
 
         private void WeatherMan_Shown(object sender, EventArgs e)
         {
-            updateweather(deviceLat, deviceLon);
+            updateweather(deviceLon, deviceLat);
         }
     }
 }
