@@ -12,6 +12,7 @@ namespace WeatherForecast
 {
     public partial class UserControlDay : UserControl
     {
+        public static string static_day;
         public UserControlDay()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace WeatherForecast
 
         private void UserControlDay_Click(object sender, EventArgs e)
         {
+            static_day = lblDay.Text;
             eventForm eventForm = new eventForm();
             eventForm.Show();
         }

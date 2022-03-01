@@ -13,6 +13,7 @@ namespace WeatherForecast
     public partial class Calender : UserControl
     {
         int month, year;
+        public static int static_month,static_year;
         public Calender()
         {
             InitializeComponent();
@@ -27,6 +28,8 @@ namespace WeatherForecast
             DateTime now = DateTime.Now;
             month = now.Month;
             year = now.Year;
+            static_month = month;
+            static_year= year;
             string monthName = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMonthYear.Text = monthName + "  " + year;
             DateTime startofthemonth = new DateTime(now.Year, now.Month, 1);
@@ -53,6 +56,8 @@ namespace WeatherForecast
         {
             dayContainer.Controls.Clear();
             month--;
+            static_month = month;
+            static_year = year;
             string monthName = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMonthYear.Text = monthName +"  " + year;
 
@@ -81,6 +86,8 @@ namespace WeatherForecast
 
             dayContainer.Controls.Clear();
             month++;
+            static_month = month;
+            static_year = year;
             string monthName = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMonthYear.Text = monthName + "  " + year;
 

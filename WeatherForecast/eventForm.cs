@@ -21,5 +21,10 @@ namespace WeatherForecast
         {
             this.Close();
         }
+
+        private void eventForm_Load(object sender, EventArgs e)
+        {
+            textBoxDate.Text = Calender.static_month + "/" + UserControlDay.static_day + "/" + Calender.static_year;
+        }
     }
 }
