@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
 
 namespace WeatherForecast
 {
@@ -16,7 +19,12 @@ namespace WeatherForecast
         {
             InitializeComponent();
         }
-
+        IFirebaseConfig ifc = new FirebaseConfig()
+        {
+            AuthSecret = "vDbkplFbNLdyWsjLBpieDvuJCx6ypyi4oCPDC3Ec",
+            BasePath = "https://weather-application-35f1d-default-rtdb.firebaseio.com/"
+        };
+        IFirebaseClient client;
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -24,6 +32,14 @@ namespace WeatherForecast
 
         private void eventForm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                client = new FireSharp.FirebaseClient(ifc);
+            }
+            catch
+            {
+                MessageBox.Show("Internet Error");
+            }
             textBoxDate.Text = Calender.static_month + "/" + UserControlDay.static_day + "/" + Calender.static_year;
         }
     }
