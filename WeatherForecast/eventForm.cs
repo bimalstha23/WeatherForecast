@@ -42,5 +42,17 @@ namespace WeatherForecast
             }
             textBoxDate.Text = Calender.static_month + "/" + UserControlDay.static_day + "/" + Calender.static_year;
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Events events = new Events()
+            {
+                date = textBoxDate.Text,
+                Event = textBoxEvent.Text
+            };
+            var set = client.Set(@"Events/", events);
+            MessageBox.Show("Event Added");
+            this.Close();
+        }
     }
 }

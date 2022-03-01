@@ -85,6 +85,7 @@
     <Compile Include="eventForm.Designer.cs">
       <DependentUpon>eventForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events.cs" />
     <Compile Include="hourlyForecast.cs" />
     <Compile Include="mainDashBoard.cs">
       <SubType>UserControl</SubType>
