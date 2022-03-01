@@ -66,6 +66,39 @@ namespace WeatherForecast
 
             }
         }
+
+        void updateHourlyForecast(double Lon, double Lat)
+        {
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&units=metric&appid={2}", Lat, Lon, api);
+                var json = web.DownloadString(url);
+                hourlyForecast.HourlyForecast hourlyForecastInfo = JsonConvert.DeserializeObject<hourlyForecast.HourlyForecast>(json);
+                lblDate1.Text = getDate(hourlyForecastInfo.hourly[0].dt).ToString("d");
+                lbltemp1.Text = hourlyForecastInfo.hourly[0].temp.ToString(); 
+
+                lblDate2.Text = getDate(hourlyForecastInfo.hourly[2].dt).ToString("d");
+                lblTemp2.Text = hourlyForecastInfo.hourly[2].temp.ToString();
+
+                lblDate3.Text = getDate(hourlyForecastInfo.hourly[5].dt).ToString("d");
+                lblTemp3.Text = hourlyForecastInfo.hourly[5].temp.ToString();
+
+                lblDate4.Text = getDate(hourlyForecastInfo.hourly[8].dt).ToString("d");
+                lblTemp4.Text = hourlyForecastInfo.hourly[8].temp.ToString();
+
+                lblDate5.Text = getDate(hourlyForecastInfo.hourly[11].dt).ToString("d");
+                lblTemp5.Text = hourlyForecastInfo.hourly[11].temp.ToString();
+
+                lblDate6.Text = getDate(hourlyForecastInfo.hourly[14].dt).ToString("d");
+                lblTemp6.Text = hourlyForecastInfo.hourly[14].temp.ToString();
+
+                lblDate7.Text = getDate(hourlyForecastInfo.hourly[17].dt).ToString("d");
+                lblTemp7.Text = hourlyForecastInfo.hourly[17].temp.ToString();
+
+                lblDate8.Text = getDate(hourlyForecastInfo.hourly[20].dt).ToString("d");
+                lblTemp8.Text = hourlyForecastInfo.hourly[20].temp.ToString();
+            }
+        }
         DateTime getDate(double millisecound)
         {
 
@@ -104,6 +137,7 @@ namespace WeatherForecast
                 {
                     MessageBox.Show("City does not exists!");
                 }
+                getcity(lon, lat);
                 updateForecast(lon, lat);
 
             }
@@ -131,6 +165,7 @@ namespace WeatherForecast
                     {
                         MessageBox.Show("City does not exists!");
                     }
+                    getcity(lon, lat);
                     updateForecast(lon, lat);
 
                 }
@@ -207,6 +242,16 @@ namespace WeatherForecast
             Watcher.StatusChanged += Watcher_StatusChanged;
             // Start the watcher.
             Watcher.Start();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            updateHourlyForecast(lon, lat);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            updateForecast(lon, lat);
         }
     }
 }

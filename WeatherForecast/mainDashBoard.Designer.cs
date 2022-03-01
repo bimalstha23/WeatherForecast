@@ -83,6 +83,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon8)).BeginInit();
             this.fifthPanel.SuspendLayout();
@@ -144,10 +146,11 @@
             // 
             // WeatherIcon8
             // 
+            this.WeatherIcon8.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon8.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon8.Image")));
-            this.WeatherIcon8.Location = new System.Drawing.Point(17, 0);
+            this.WeatherIcon8.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon8.Name = "WeatherIcon8";
-            this.WeatherIcon8.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon8.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon8.TabIndex = 9;
             this.WeatherIcon8.TabStop = false;
             // 
@@ -368,10 +371,11 @@
             // 
             // WeatherIcon1
             // 
+            this.WeatherIcon1.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon1.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon1.Image")));
-            this.WeatherIcon1.Location = new System.Drawing.Point(16, 0);
+            this.WeatherIcon1.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon1.Name = "WeatherIcon1";
-            this.WeatherIcon1.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon1.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon1.TabIndex = 4;
             this.WeatherIcon1.TabStop = false;
             // 
@@ -409,10 +413,11 @@
             // 
             // WeatherIcon2
             // 
+            this.WeatherIcon2.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon2.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon2.Image")));
-            this.WeatherIcon2.Location = new System.Drawing.Point(17, 0);
+            this.WeatherIcon2.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon2.Name = "WeatherIcon2";
-            this.WeatherIcon2.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon2.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon2.TabIndex = 5;
             this.WeatherIcon2.TabStop = false;
             // 
@@ -450,10 +455,11 @@
             // 
             // WeatherIcon4
             // 
+            this.WeatherIcon4.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon4.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon4.Image")));
-            this.WeatherIcon4.Location = new System.Drawing.Point(15, 0);
+            this.WeatherIcon4.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon4.Name = "WeatherIcon4";
-            this.WeatherIcon4.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon4.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon4.TabIndex = 7;
             this.WeatherIcon4.TabStop = false;
             // 
@@ -491,10 +497,11 @@
             // 
             // WeatherIcon5
             // 
+            this.WeatherIcon5.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon5.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon5.Image")));
-            this.WeatherIcon5.Location = new System.Drawing.Point(15, 0);
+            this.WeatherIcon5.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon5.Name = "WeatherIcon5";
-            this.WeatherIcon5.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon5.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon5.TabIndex = 8;
             this.WeatherIcon5.TabStop = false;
             // 
@@ -532,10 +539,11 @@
             // 
             // WeatherIcon6
             // 
+            this.WeatherIcon6.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon6.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon6.Image")));
-            this.WeatherIcon6.Location = new System.Drawing.Point(18, 0);
+            this.WeatherIcon6.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon6.Name = "WeatherIcon6";
-            this.WeatherIcon6.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon6.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon6.TabIndex = 8;
             this.WeatherIcon6.TabStop = false;
             // 
@@ -573,10 +581,11 @@
             // 
             // WeatherIcon7
             // 
+            this.WeatherIcon7.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon7.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon7.Image")));
-            this.WeatherIcon7.Location = new System.Drawing.Point(17, 0);
+            this.WeatherIcon7.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon7.Name = "WeatherIcon7";
-            this.WeatherIcon7.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon7.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon7.TabIndex = 9;
             this.WeatherIcon7.TabStop = false;
             // 
@@ -614,10 +623,11 @@
             // 
             // WeatherIcon3
             // 
+            this.WeatherIcon3.Dock = System.Windows.Forms.DockStyle.Top;
             this.WeatherIcon3.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon3.Image")));
-            this.WeatherIcon3.Location = new System.Drawing.Point(17, 0);
+            this.WeatherIcon3.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon3.Name = "WeatherIcon3";
-            this.WeatherIcon3.Size = new System.Drawing.Size(32, 33);
+            this.WeatherIcon3.Size = new System.Drawing.Size(65, 33);
             this.WeatherIcon3.TabIndex = 6;
             this.WeatherIcon3.TabStop = false;
             // 
@@ -693,10 +703,33 @@
             this.label6.TabIndex = 48;
             this.label6.Text = "label6";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(761, 220);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "HOURLY";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(717, 220);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "DAILY";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // mainDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel8);
@@ -820,5 +853,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

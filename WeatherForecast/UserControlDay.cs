@@ -25,5 +25,11 @@ namespace WeatherForecast
         {
             lblDay.Text = numday.ToString();
         }
+
+        private void UserControlDay_Click(object sender, EventArgs e)
+        {
+            eventForm eventForm = new eventForm();
+            eventForm.Show();
+        }
     }
 }

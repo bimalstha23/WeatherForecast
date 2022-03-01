@@ -59,6 +59,12 @@
     <Compile Include="Calender.Designer.cs">
       <DependentUpon>Calender.cs</DependentUpon>
     </Compile>
+    <Compile Include="eventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eventForm.Designer.cs">
+      <DependentUpon>eventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="hourlyForecast.cs" />
     <Compile Include="mainDashBoard.cs">
       <SubType>UserControl</SubType>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Calender.resx">
       <DependentUpon>Calender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eventForm.resx">
+      <DependentUpon>eventForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainDashBoard.resx">
       <DependentUpon>mainDashBoard.cs</DependentUpon>
