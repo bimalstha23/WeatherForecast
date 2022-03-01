@@ -401,6 +401,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WeatherMan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WeatherMan";
             this.Load += new System.EventHandler(this.WeatherMan_Load_1);
             this.Shown += new System.EventHandler(this.WeatherMan_Shown);

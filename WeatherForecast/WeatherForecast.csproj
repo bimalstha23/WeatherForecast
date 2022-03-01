@@ -59,6 +59,7 @@
     <Compile Include="Calender.Designer.cs">
       <DependentUpon>Calender.cs</DependentUpon>
     </Compile>
+    <Compile Include="hourlyForecast.cs" />
     <Compile Include="mainDashBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
