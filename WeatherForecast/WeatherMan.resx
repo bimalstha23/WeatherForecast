@@ -1611,4 +1611,20 @@
         gg==
 </value>
   </data>
+  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAuSURBVEhLYxgFo2AUjAISgYCAgAE/P/8BSjDIDKhxmIDmFoyCUTAKRgE2wMAAAHTrHyHBjFXB
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAALFJREFUSEvt
+        lFsKwjAURLOBPHaiqFBE8IH2q66gf25di+twrsyFQmtpTfKXA5c0k2Ymj1JTKOTDOddaaw/s/sR7vwsh
+        PNidDyatMfmFulIagHdOqDcWsqe0jKmQaHOFIU/UjZJo5yTmSj9EzNHKrrYcTgMuvYJpJ4WQI+V0ZA2A
+        4QXG32PB8wqtHFfN4Th65htKoklIh101lP5jzFzREHxJd0rLmDJXokKy/yoKhZkY8wFb/CevTV+bMwAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
 </root>

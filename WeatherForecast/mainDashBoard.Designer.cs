@@ -81,8 +81,6 @@
             this.titlelbl = new System.Windows.Forms.Label();
             this.searchbtn = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel8.SuspendLayout();
@@ -685,24 +683,6 @@
             this.txtSearch.Size = new System.Drawing.Size(484, 26);
             this.txtSearch.TabIndex = 29;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(328, 385);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "label2";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(477, 407);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "label6";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -730,8 +710,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel8);
             this.Controls.Add(this.fifthPanel);
             this.Controls.Add(this.fourthPanel);
@@ -851,8 +829,6 @@
         private System.Windows.Forms.Label titlelbl;
         private Guna.UI2.WinForms.Guna2Button searchbtn;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
     }

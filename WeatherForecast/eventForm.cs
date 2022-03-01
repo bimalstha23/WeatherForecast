@@ -15,6 +15,7 @@ namespace WeatherForecast
 {
     public partial class eventForm : Form
     {
+        string key;
         public eventForm()
         {
             InitializeComponent();
@@ -40,17 +41,19 @@ namespace WeatherForecast
             {
                 MessageBox.Show("Internet Error");
             }
-            textBoxDate.Text = Calender.static_month + "/" + UserControlDay.static_day + "/" + Calender.static_year;
+            textBoxDate.Text = Calender.static_month + "-" + UserControlDay.static_day + "-" + Calender.static_year;
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            key = textBoxDate.Text;
             Events events = new Events()
             {
                 date = textBoxDate.Text,
                 Event = textBoxEvent.Text
             };
-            var set = client.Set(@"Events/", events);
+            var set = client.Set(@"Events/"+key, events);
             MessageBox.Show("Event Added");
             this.Close();
         }

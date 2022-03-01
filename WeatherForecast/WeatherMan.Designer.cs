@@ -59,12 +59,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentweathericon)).BeginInit();
             this.panelinfo.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -217,7 +220,7 @@
             this.currentweathericon.Image = ((System.Drawing.Image)(resources.GetObject("currentweathericon.Image")));
             this.currentweathericon.Location = new System.Drawing.Point(2, 23);
             this.currentweathericon.Name = "currentweathericon";
-            this.currentweathericon.Size = new System.Drawing.Size(32, 33);
+            this.currentweathericon.Size = new System.Drawing.Size(36, 33);
             this.currentweathericon.TabIndex = 0;
             this.currentweathericon.TabStop = false;
             // 
@@ -377,19 +380,45 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(195, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(860, 17);
+            this.panel3.Size = new System.Drawing.Size(860, 23);
             this.panel3.TabIndex = 30;
             // 
             // panelContainer
             // 
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(195, 17);
+            this.panelContainer.Location = new System.Drawing.Point(195, 23);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(860, 583);
+            this.panelContainer.Size = new System.Drawing.Size(860, 577);
             this.panelContainer.TabIndex = 31;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Location = new System.Drawing.Point(833, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 32;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.Location = new System.Drawing.Point(806, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 23);
+            this.button2.TabIndex = 33;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // WeatherMan
             // 
@@ -414,6 +443,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -450,6 +480,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel activeContainerPanel;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

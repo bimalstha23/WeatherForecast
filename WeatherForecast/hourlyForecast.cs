@@ -10,7 +10,7 @@ namespace WeatherForecast
     {
         public class weather
         {
-            public string descrition { get; set; }
+            public string icon { get; set; }
 
         }
         public class hourly

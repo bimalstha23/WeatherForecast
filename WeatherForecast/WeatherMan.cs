@@ -101,6 +101,7 @@ namespace WeatherForecast
 
                 var json = web.DownloadString(url);
                 WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
+                currentweathericon.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
                 lblHumidity.Text = Info.main.humidity.ToString();
                 lblTemp.Text = Convert.ToInt32(Info.main.temp).ToString();
                 lblVisibility.Text = Info.visibility.ToString();
@@ -127,6 +128,16 @@ namespace WeatherForecast
         private void WeatherMan_Shown(object sender, EventArgs e)
         {
             updateweather(deviceLon, deviceLat);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
