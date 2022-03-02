@@ -86,35 +86,35 @@ namespace WeatherForecast
                 var json = web.DownloadString(url);
                 hourlyForecast.HourlyForecast hourlyForecastInfo = JsonConvert.DeserializeObject<hourlyForecast.HourlyForecast>(json);
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[0].weather[0].icon + ".png";
-                lblDate1.Text = getDate(hourlyForecastInfo.hourly[0].dt).ToString("d");
+                lblDate1.Text = getDate(hourlyForecastInfo.hourly[0].dt).ToString("HH:mm");
                 lbltemp1.Text = hourlyForecastInfo.hourly[0].temp.ToString();
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[2].weather[0].icon + ".png";
-                lblDate2.Text = getDate(hourlyForecastInfo.hourly[2].dt).ToString("d");
+                lblDate2.Text = getDate(hourlyForecastInfo.hourly[2].dt).ToString("HH:mm");
                 lblTemp2.Text = hourlyForecastInfo.hourly[2].temp.ToString();
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[5].weather[0].icon + ".png";
-                lblDate3.Text = getDate(hourlyForecastInfo.hourly[5].dt).ToString("d");
+                lblDate3.Text = getDate(hourlyForecastInfo.hourly[5].dt).ToString("HH:mm");
                 lblTemp3.Text = hourlyForecastInfo.hourly[5].temp.ToString();
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[8].weather[0].icon + ".png";
-                lblDate4.Text = getDate(hourlyForecastInfo.hourly[8].dt).ToString("d");
+                lblDate4.Text = getDate(hourlyForecastInfo.hourly[8].dt).ToString("HH:mm");
                 lblTemp4.Text = hourlyForecastInfo.hourly[8].temp.ToString();
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[11].weather[0].icon + ".png";
-                lblDate5.Text = getDate(hourlyForecastInfo.hourly[11].dt).ToString("d");
+                lblDate5.Text = getDate(hourlyForecastInfo.hourly[11].dt).ToString("HH:mm");
                 lblTemp5.Text = hourlyForecastInfo.hourly[11].temp.ToString();
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[14].weather[0].icon + ".png";
-                lblDate6.Text = getDate(hourlyForecastInfo.hourly[14].dt).ToString("d");
+                lblDate6.Text = getDate(hourlyForecastInfo.hourly[14].dt).ToString("HH:mm");
                 lblTemp6.Text = hourlyForecastInfo.hourly[14].temp.ToString();
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[17].weather[0].icon + ".png";
-                lblDate7.Text = getDate(hourlyForecastInfo.hourly[17].dt).ToString("d");
+                lblDate7.Text = getDate(hourlyForecastInfo.hourly[17].dt).ToString("HH:mm");
                 lblTemp7.Text = hourlyForecastInfo.hourly[17].temp.ToString();
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[20].weather[0].icon + ".png";
-                lblDate8.Text = getDate(hourlyForecastInfo.hourly[20].dt).ToString("d");
+                lblDate8.Text = getDate(hourlyForecastInfo.hourly[20].dt).ToString("HH:mm");
                 lblTemp8.Text = hourlyForecastInfo.hourly[20].temp.ToString();
             }
         }
@@ -277,11 +277,13 @@ namespace WeatherForecast
         private void label9_Click(object sender, EventArgs e)
         {
             updateHourlyForecast(lon, lat);
+            ChartHourly(lon, lat);
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
             updateForecast(lon, lat);
+            Chart(lon, lat);
         }
         
         void Chart(double Lon, double Lat)
@@ -306,6 +308,36 @@ namespace WeatherForecast
                         new ObservablePoint(getDate(ForecastInfo.daily[5].dt).Day,ForecastInfo.daily[5].temp.max),
                         new ObservablePoint(getDate(ForecastInfo.daily[6].dt).Day,ForecastInfo.daily[6].temp.max),
                         new ObservablePoint(getDate(ForecastInfo.daily[7].dt).Day,ForecastInfo.daily[7].temp.max),
+                        },
+                        PointGeometrySize = 40
+
+                    }
+                };
+            }
+        }
+
+        void ChartHourly(double Lon, double Lat)
+        {
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&units=metric&appid={2}", Lat, Lon, api);
+                var json = web.DownloadString(url);
+                hourlyForecast.HourlyForecast hourlyForecastInfo = JsonConvert.DeserializeObject<hourlyForecast.HourlyForecast>(json);
+                cartesianChart1.Series = new SeriesCollection
+                {
+                    new LineSeries
+                    {
+                        Title = getcity(Lon, Lat),
+                        Values = new ChartValues<ObservablePoint>
+                        {
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[0].dt).Hour,hourlyForecastInfo.hourly[0].temp),
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[2].dt).Hour,hourlyForecastInfo.hourly[2].temp),
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[5].dt).Hour,hourlyForecastInfo.hourly[5].temp),
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[8].dt).Hour,hourlyForecastInfo.hourly[8].temp),
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[11].dt).Hour,hourlyForecastInfo.hourly[11].temp),
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[14].dt).Hour,hourlyForecastInfo.hourly[14].temp),
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[17].dt).Hour,hourlyForecastInfo.hourly[17].temp),
+                        new ObservablePoint(getDate(hourlyForecastInfo.hourly[20].dt).Hour,hourlyForecastInfo.hourly[20].temp),
                         },
                         PointGeometrySize = 40
 
