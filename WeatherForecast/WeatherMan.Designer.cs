@@ -58,9 +58,9 @@
             this.Logotitle = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelContainer = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentweathericon)).BeginInit();
             this.panelinfo.SuspendLayout();
@@ -100,9 +100,9 @@
             this.label13.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(2, 194);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 15);
+            this.label13.Size = new System.Drawing.Size(62, 15);
             this.label13.TabIndex = 36;
-            this.label13.Text = "Wind Speed:";
+            this.label13.Text = "Pressure:";
             // 
             // lblWindspeed
             // 
@@ -388,13 +388,17 @@
             this.panel3.Size = new System.Drawing.Size(860, 23);
             this.panel3.TabIndex = 30;
             // 
-            // panelContainer
+            // button2
             // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(195, 23);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(860, 577);
-            this.panelContainer.TabIndex = 31;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.Location = new System.Drawing.Point(806, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 23);
+            this.button2.TabIndex = 33;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -408,17 +412,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // panelContainer
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.Location = new System.Drawing.Point(806, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 23);
-            this.button2.TabIndex = 33;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(195, 23);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(860, 577);
+            this.panelContainer.TabIndex = 31;
             // 
             // WeatherMan
             // 

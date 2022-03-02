@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net;
 using System.Device.Location;
+using LiveCharts;
+using LiveCharts.Wpf;
+using LiveCharts.Defaults;
 
 namespace WeatherForecast
 {
@@ -31,6 +34,7 @@ namespace WeatherForecast
         public mainDashBoard()
         {
             InitializeComponent();
+          
         }
         void updateForecast(double Lon, double Lat)
         {
@@ -41,35 +45,35 @@ namespace WeatherForecast
                 Weatherforecast.ForecastInfo ForecastInfo = JsonConvert.DeserializeObject<Weatherforecast.ForecastInfo>(json);
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[0].weather[0].icon + ".png";
                 lblDate1.Text = getDate(ForecastInfo.daily[0].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[0].dt).ToString("ddd");
-                lbltemp1.Text = ForecastInfo.daily[0].temp.min.ToString() + "/" + ForecastInfo.daily[0].temp.min.ToString();
+                lbltemp1.Text = ForecastInfo.daily[0].temp.max.ToString() + "/" + ForecastInfo.daily[0].temp.min.ToString();
 
                 WeatherIcon2.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[1].weather[0].icon + ".png";
                 lblDate2.Text = getDate(ForecastInfo.daily[1].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[1].dt).ToString("ddd");
-                lblTemp2.Text = ForecastInfo.daily[1].temp.min.ToString() + "/" + ForecastInfo.daily[1].temp.min.ToString();
+                lblTemp2.Text = ForecastInfo.daily[1].temp.max.ToString() + "/" + ForecastInfo.daily[1].temp.min.ToString();
 
                 WeatherIcon3.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[2].weather[0].icon + ".png";
                 lblDate3.Text = getDate(ForecastInfo.daily[2].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[2].dt).ToString("ddd");
-                lblTemp3.Text = ForecastInfo.daily[2].temp.min.ToString() + "/" + ForecastInfo.daily[2].temp.min.ToString();
+                lblTemp3.Text = ForecastInfo.daily[2].temp.max.ToString() + "/" + ForecastInfo.daily[2].temp.min.ToString();
 
                 WeatherIcon4.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[3].weather[0].icon + ".png";
                 lblDate4.Text = getDate(ForecastInfo.daily[3].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[3].dt).ToString("ddd");
-                lblTemp4.Text = ForecastInfo.daily[3].temp.min.ToString() + "/" + ForecastInfo.daily[3].temp.min.ToString();
+                lblTemp4.Text = ForecastInfo.daily[3].temp.max.ToString() + "/" + ForecastInfo.daily[3].temp.min.ToString();
 
                 WeatherIcon5.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[4].weather[0].icon + ".png";
                 lblDate5.Text = getDate(ForecastInfo.daily[4].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[4].dt).ToString("ddd");
-                lblTemp5.Text = ForecastInfo.daily[4].temp.min.ToString() + "/" + ForecastInfo.daily[4].temp.min.ToString();
+                lblTemp5.Text = ForecastInfo.daily[4].temp.max.ToString() + "/" + ForecastInfo.daily[4].temp.min.ToString();
 
                 WeatherIcon6.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[5].weather[0].icon + ".png";
                 lblDate6.Text = getDate(ForecastInfo.daily[5].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[5].dt).ToString("ddd");
-                lblTemp6.Text = ForecastInfo.daily[5].temp.min.ToString() + "/" + ForecastInfo.daily[5].temp.min.ToString();
+                lblTemp6.Text = ForecastInfo.daily[5].temp.max.ToString() + "/" + ForecastInfo.daily[5].temp.min.ToString();
 
                 WeatherIcon7.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[6].weather[0].icon + ".png";
                 lblDate7.Text = getDate(ForecastInfo.daily[6].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[6].dt).ToString("ddd");
-                lblTemp7.Text = ForecastInfo.daily[6].temp.min.ToString() + "/" + ForecastInfo.daily[6].temp.min.ToString();
+                lblTemp7.Text = ForecastInfo.daily[6].temp.max.ToString() + "/" + ForecastInfo.daily[6].temp.min.ToString();
                 
                 WeatherIcon8.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[7].weather[0].icon + ".png";
                 lblDate8.Text = getDate(ForecastInfo.daily[7].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[7].dt).ToString("ddd");
-                lblTemp8.Text = ForecastInfo.daily[7].temp.min.ToString() + "/" + ForecastInfo.daily[7].temp.min.ToString();
+                lblTemp8.Text = ForecastInfo.daily[7].temp.max.ToString() + "/" + ForecastInfo.daily[7].temp.min.ToString();
 
             }
         }
@@ -154,6 +158,7 @@ namespace WeatherForecast
                 }
                 getcity(lon, lat);
                 updateForecast(lon, lat);
+                Chart(lon, lat);
 
             }
         }
@@ -182,6 +187,7 @@ namespace WeatherForecast
                     }
                     getcity(lon, lat);
                     updateForecast(lon, lat);
+                    Chart(lon, lat);
 
                 }
 
@@ -193,30 +199,35 @@ namespace WeatherForecast
         {
             getLonLat(favFirstLocation);
             updateForecast(lon,lat);
+            Chart(lon, lat);
         }
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
             getLonLat(favSecondLocation);
             updateForecast(lon, lat);
+            Chart(lon, lat);
         }
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
             getLonLat(favThirdLocation);
             updateForecast(lon, lat);
+            Chart(lon, lat);
         }
 
         private void guna2PictureBox4_Click(object sender, EventArgs e)
         {
             getLonLat(favFourthLocation);
             updateForecast(lon, lat);
+            Chart(lon, lat);
         }
 
         private void guna2PictureBox5_Click(object sender, EventArgs e)
         {
             getLonLat(favFifthLocation);
             updateForecast(lon, lat);
+            Chart(lon, lat);
         }
         private void Watcher_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
         {
@@ -231,14 +242,15 @@ namespace WeatherForecast
                 {
                     deviceLat = Watcher.Position.Location.Latitude;
                     deviceLon = Watcher.Position.Location.Longitude;
-                    label2.Text = deviceLon.ToString();
-                    label6.Text = deviceLat.ToString();
+                    /*label2.Text = deviceLon.ToString();
+                    label6.Text = deviceLat.ToString();*/
                     getcity(deviceLon, deviceLat);
                     updateForecast(deviceLon, deviceLat);
+                    Chart(deviceLon, deviceLat);
                 }
             }
         }
-        void getcity(double Lon, double Lat)
+        string getcity(double Lon, double Lat)
         {
 
             using (WebClient web = new WebClient())
@@ -248,10 +260,13 @@ namespace WeatherForecast
                 var json = web.DownloadString(url);
                 WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                 lblForecastCity.Text = Info.name;
+                return Info.name;
             }
         }
         private void mainDashBoard_Load(object sender, EventArgs e)
         {
+
+           
             Watcher = new GeoCoordinateWatcher();
             // Catch the StatusChanged event.
             Watcher.StatusChanged += Watcher_StatusChanged;
@@ -267,6 +282,36 @@ namespace WeatherForecast
         private void label10_Click(object sender, EventArgs e)
         {
             updateForecast(lon, lat);
+        }
+        
+        void Chart(double Lon, double Lat)
+        {
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,hourly,alerts&units=metric&appid={2}", Lat, Lon, api);
+                var json = web.DownloadString(url);
+                Weatherforecast.ForecastInfo ForecastInfo = JsonConvert.DeserializeObject<Weatherforecast.ForecastInfo>(json);
+                cartesianChart1.Series = new SeriesCollection
+                {
+                    new LineSeries
+                    {
+                        Title = getcity(Lon, Lat),
+                        Values = new ChartValues<ObservablePoint>
+                        {
+                        new ObservablePoint(getDate(ForecastInfo.daily[0].dt).Day,ForecastInfo.daily[0].temp.max),
+                        new ObservablePoint(getDate(ForecastInfo.daily[1].dt).Day,ForecastInfo.daily[1].temp.max),
+                        new ObservablePoint(getDate(ForecastInfo.daily[2].dt).Day,ForecastInfo.daily[2].temp.max),
+                        new ObservablePoint(getDate(ForecastInfo.daily[3].dt).Day,ForecastInfo.daily[3].temp.max),
+                        new ObservablePoint(getDate(ForecastInfo.daily[4].dt).Day,ForecastInfo.daily[4].temp.max),
+                        new ObservablePoint(getDate(ForecastInfo.daily[5].dt).Day,ForecastInfo.daily[5].temp.max),
+                        new ObservablePoint(getDate(ForecastInfo.daily[6].dt).Day,ForecastInfo.daily[6].temp.max),
+                        new ObservablePoint(getDate(ForecastInfo.daily[7].dt).Day,ForecastInfo.daily[7].temp.max),
+                        },
+                        PointGeometrySize = 40
+
+                    }
+                };
+            }
         }
     }
 }

@@ -83,6 +83,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.guna2Panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon8)).BeginInit();
             this.fifthPanel.SuspendLayout();
@@ -704,10 +705,22 @@
             this.label10.Text = "DAILY";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cartesianChart1.Location = new System.Drawing.Point(26, 349);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(787, 233);
+            this.cartesianChart1.TabIndex = 51;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
             // mainDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cartesianChart1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.guna2Panel8);
@@ -831,5 +844,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }
