@@ -8,22 +8,102 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WeatherForecast.Properties
-{
-
-
+namespace WeatherForecast.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("pokhara")]
+        public string favFirstPanelLoc1 {
+            get {
+                return ((string)(this["favFirstPanelLoc1"]));
+            }
+            set {
+                this["favFirstPanelLoc1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("kathmandu")]
+        public string favFirstPanelLoc2 {
+            get {
+                return ((string)(this["favFirstPanelLoc2"]));
+            }
+            set {
+                this["favFirstPanelLoc2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("lalitpur")]
+        public string favFirstPanelLoc3 {
+            get {
+                return ((string)(this["favFirstPanelLoc3"]));
+            }
+            set {
+                this["favFirstPanelLoc3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("bhaktapur")]
+        public string favFirstPanelLoc4 {
+            get {
+                return ((string)(this["favFirstPanelLoc4"]));
+            }
+            set {
+                this["favFirstPanelLoc4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("biratnagar")]
+        public string favFirstPanelLoc5 {
+            get {
+                return ((string)(this["favFirstPanelLoc5"]));
+            }
+            set {
+                this["favFirstPanelLoc5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool tempratureStatusCelcius {
+            get {
+                return ((bool)(this["tempratureStatusCelcius"]));
+            }
+            set {
+                this["tempratureStatusCelcius"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool tempratureStatusFahrenheit {
+            get {
+                return ((bool)(this["tempratureStatusFahrenheit"]));
+            }
+            set {
+                this["tempratureStatusFahrenheit"] = value;
             }
         }
     }
