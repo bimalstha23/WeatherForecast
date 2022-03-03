@@ -194,6 +194,7 @@ namespace WeatherForecast
             
             if (e.KeyCode == Keys.Enter)
             {
+                e.SuppressKeyPress = true;
                 //Perform search
                 string cityName = txtSearch.Text;
 
@@ -201,7 +202,7 @@ namespace WeatherForecast
                 {
                     try
                     {
-                        string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units={1}&appid={2}", cityName,tempratureMeter, api);
+                        string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units={1}&appid={2}", cityName, tempratureMeter, api);
                         var json = web.DownloadString(url);
                         WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                         lon = Info.coord.lon;

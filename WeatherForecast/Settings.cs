@@ -97,6 +97,7 @@ namespace WeatherForecast
         {
             getSettings();
             setSettings();
+            MessageBox.Show("Settings Saved!");
            /* WeatherMan weatherform = new WeatherMan();
             weatherform.updateweather(weatherform.deviceLon,weatherform.deviceLat);*/
         }
