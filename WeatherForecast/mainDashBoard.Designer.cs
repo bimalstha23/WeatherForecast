@@ -35,19 +35,19 @@
             this.WeatherIcon8 = new System.Windows.Forms.PictureBox();
             this.fifthPanel = new System.Windows.Forms.Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.favLoc5 = new System.Windows.Forms.Label();
             this.fourthPanel = new System.Windows.Forms.Panel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.favLoc4 = new System.Windows.Forms.Label();
             this.thirdPanel = new System.Windows.Forms.Panel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.favLoc3 = new System.Windows.Forms.Label();
             this.secPanel = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.favLoc2 = new System.Windows.Forms.Label();
             this.firstPanel = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.favLoc1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblDate1 = new System.Windows.Forms.Label();
@@ -156,7 +156,7 @@
             // fifthPanel
             // 
             this.fifthPanel.Controls.Add(this.guna2PictureBox5);
-            this.fifthPanel.Controls.Add(this.label8);
+            this.fifthPanel.Controls.Add(this.favLoc5);
             this.fifthPanel.Location = new System.Drawing.Point(680, 90);
             this.fifthPanel.Name = "fifthPanel";
             this.fifthPanel.Size = new System.Drawing.Size(133, 100);
@@ -176,20 +176,20 @@
             this.guna2PictureBox5.TabStop = false;
             this.guna2PictureBox5.Click += new System.EventHandler(this.guna2PictureBox5_Click);
             // 
-            // label8
+            // favLoc5
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
-            this.label8.Location = new System.Drawing.Point(44, 84);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 13);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Biratnagar";
+            this.favLoc5.AutoSize = true;
+            this.favLoc5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
+            this.favLoc5.Location = new System.Drawing.Point(44, 84);
+            this.favLoc5.Name = "favLoc5";
+            this.favLoc5.Size = new System.Drawing.Size(55, 13);
+            this.favLoc5.TabIndex = 25;
+            this.favLoc5.Text = "Biratnagar";
             // 
             // fourthPanel
             // 
             this.fourthPanel.Controls.Add(this.guna2PictureBox4);
-            this.fourthPanel.Controls.Add(this.label5);
+            this.fourthPanel.Controls.Add(this.favLoc4);
             this.fourthPanel.Location = new System.Drawing.Point(511, 87);
             this.fourthPanel.Name = "fourthPanel";
             this.fourthPanel.Size = new System.Drawing.Size(133, 100);
@@ -209,20 +209,20 @@
             this.guna2PictureBox4.TabStop = false;
             this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
             // 
-            // label5
+            // favLoc4
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
-            this.label5.Location = new System.Drawing.Point(45, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Bhaktapur";
+            this.favLoc4.AutoSize = true;
+            this.favLoc4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
+            this.favLoc4.Location = new System.Drawing.Point(45, 85);
+            this.favLoc4.Name = "favLoc4";
+            this.favLoc4.Size = new System.Drawing.Size(56, 13);
+            this.favLoc4.TabIndex = 17;
+            this.favLoc4.Text = "Bhaktapur";
             // 
             // thirdPanel
             // 
             this.thirdPanel.Controls.Add(this.guna2PictureBox3);
-            this.thirdPanel.Controls.Add(this.label4);
+            this.thirdPanel.Controls.Add(this.favLoc3);
             this.thirdPanel.Location = new System.Drawing.Point(340, 87);
             this.thirdPanel.Name = "thirdPanel";
             this.thirdPanel.Size = new System.Drawing.Size(133, 100);
@@ -243,20 +243,20 @@
             this.guna2PictureBox3.TabStop = false;
             this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
             // 
-            // label4
+            // favLoc3
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
-            this.label4.Location = new System.Drawing.Point(41, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Lalitpur";
+            this.favLoc3.AutoSize = true;
+            this.favLoc3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
+            this.favLoc3.Location = new System.Drawing.Point(41, 85);
+            this.favLoc3.Name = "favLoc3";
+            this.favLoc3.Size = new System.Drawing.Size(41, 13);
+            this.favLoc3.TabIndex = 16;
+            this.favLoc3.Text = "Lalitpur";
             // 
             // secPanel
             // 
             this.secPanel.Controls.Add(this.guna2PictureBox2);
-            this.secPanel.Controls.Add(this.label3);
+            this.secPanel.Controls.Add(this.favLoc2);
             this.secPanel.Location = new System.Drawing.Point(179, 87);
             this.secPanel.Name = "secPanel";
             this.secPanel.Size = new System.Drawing.Size(133, 100);
@@ -277,20 +277,20 @@
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
-            // label3
+            // favLoc2
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(34, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Kathmandu";
+            this.favLoc2.AutoSize = true;
+            this.favLoc2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.favLoc2.Location = new System.Drawing.Point(34, 85);
+            this.favLoc2.Name = "favLoc2";
+            this.favLoc2.Size = new System.Drawing.Size(61, 13);
+            this.favLoc2.TabIndex = 15;
+            this.favLoc2.Text = "Kathmandu";
             // 
             // firstPanel
             // 
             this.firstPanel.Controls.Add(this.guna2PictureBox1);
-            this.firstPanel.Controls.Add(this.label1);
+            this.firstPanel.Controls.Add(this.favLoc1);
             this.firstPanel.Location = new System.Drawing.Point(20, 90);
             this.firstPanel.Name = "firstPanel";
             this.firstPanel.Size = new System.Drawing.Size(133, 100);
@@ -315,15 +315,15 @@
             this.guna2PictureBox1.WaitOnLoad = true;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // label1
+            // favLoc1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
-            this.label1.Location = new System.Drawing.Point(37, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Pokhara";
+            this.favLoc1.AutoSize = true;
+            this.favLoc1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(73)))), ((int)(((byte)(105)))));
+            this.favLoc1.Location = new System.Drawing.Point(37, 85);
+            this.favLoc1.Name = "favLoc1";
+            this.favLoc1.Size = new System.Drawing.Size(47, 13);
+            this.favLoc1.TabIndex = 14;
+            this.favLoc1.Text = "Pokhara";
             // 
             // label7
             // 
@@ -796,19 +796,19 @@
         private System.Windows.Forms.PictureBox WeatherIcon8;
         private System.Windows.Forms.Panel fifthPanel;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label favLoc5;
         private System.Windows.Forms.Panel fourthPanel;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label favLoc4;
         private System.Windows.Forms.Panel thirdPanel;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label favLoc3;
         private System.Windows.Forms.Panel secPanel;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label favLoc2;
         private System.Windows.Forms.Panel firstPanel;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label favLoc1;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private System.Windows.Forms.Label lblDate1;

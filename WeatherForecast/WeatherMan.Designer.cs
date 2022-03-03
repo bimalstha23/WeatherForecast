@@ -48,7 +48,6 @@
             this.currentweathericon = new System.Windows.Forms.PictureBox();
             this.panelinfo = new System.Windows.Forms.Panel();
             this.lblCityname = new System.Windows.Forms.Label();
-            this.lblTempstatus = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.activeContainerPanel = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -239,7 +238,6 @@
             this.panelinfo.Controls.Add(this.lblCityname);
             this.panelinfo.Controls.Add(this.lblTemp);
             this.panelinfo.Controls.Add(this.panel2);
-            this.panelinfo.Controls.Add(this.lblTempstatus);
             this.panelinfo.Location = new System.Drawing.Point(12, 299);
             this.panelinfo.Name = "panelinfo";
             this.panelinfo.Size = new System.Drawing.Size(158, 256);
@@ -254,16 +252,6 @@
             this.lblCityname.Size = new System.Drawing.Size(33, 16);
             this.lblCityname.TabIndex = 4;
             this.lblCityname.Text = "N/A";
-            // 
-            // lblTempstatus
-            // 
-            this.lblTempstatus.AutoSize = true;
-            this.lblTempstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempstatus.Location = new System.Drawing.Point(89, 73);
-            this.lblTempstatus.Name = "lblTempstatus";
-            this.lblTempstatus.Size = new System.Drawing.Size(45, 42);
-            this.lblTempstatus.TabIndex = 28;
-            this.lblTempstatus.Text = "C";
             // 
             // panelMenu
             // 
@@ -469,7 +457,6 @@
         private System.Windows.Forms.PictureBox currentweathericon;
         private System.Windows.Forms.Panel panelinfo;
         private System.Windows.Forms.Label lblCityname;
-        private System.Windows.Forms.Label lblTempstatus;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCalender;

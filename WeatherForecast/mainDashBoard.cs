@@ -23,18 +23,31 @@ namespace WeatherForecast
         public string api = "c3cf60022dfe56ff49aa0a20ec89558f";
         double lon;
         double lat;
-        public string favFirstLocation = "Pokhara";
-        public string favSecondLocation = "Kathmandu";
-        public string favThirdLocation = "Lalitpur";
-        public string favFourthLocation = "Bhaktapur";
-        public string favFifthLocation = "Biratnagar";
+        public string favFirstLocation = Properties.Settings.Default.favFirstPanelLoc1;
+        public string favSecondLocation = Properties.Settings.Default.favFirstPanelLoc2;
+        public string favThirdLocation = Properties.Settings.Default.favFirstPanelLoc3;
+        public string favFourthLocation = Properties.Settings.Default.favFirstPanelLoc4;
+        public string favFifthLocation = Properties.Settings.Default.favFirstPanelLoc5;
         public double deviceLon;
         public double deviceLat;
+        public string tempratureMeter;
         private GeoCoordinateWatcher Watcher = null;
         public mainDashBoard()
         {
             InitializeComponent();
           
+        }
+        void updatefromonload()
+        {
+            favLoc1.Text = favFirstLocation;
+            favLoc2.Text = favSecondLocation;
+            favLoc3.Text = favThirdLocation;
+            favLoc4.Text = favFourthLocation;
+            favLoc5.Text = favFifthLocation;
+            if (Properties.Settings.Default.tempratureStatusCelcius == true)
+                tempratureMeter = "metric";
+            else
+                tempratureMeter = "imperial";
         }
         void updateForecast(double Lon, double Lat)
         {
@@ -130,12 +143,19 @@ namespace WeatherForecast
         {
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&appid={1}", text, api);
-                var json = web.DownloadString(url);
-                WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
-                lon = Info.coord.lon;
-                lat = Info.coord.lat;
-                lblForecastCity.Text = Info.name;
+                try
+                {
+                    string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&appid={1}", text, api);
+                    var json = web.DownloadString(url);
+                    WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
+                    lon = Info.coord.lon;
+                    lat = Info.coord.lat;
+                    lblForecastCity.Text = Info.name;
+                }
+                catch (WebException)
+                {
+                    MessageBox.Show("City does not exists!");
+                }
             }
         }
         private void searchbtn_Click(object sender, EventArgs e)
@@ -266,7 +286,7 @@ namespace WeatherForecast
         private void mainDashBoard_Load(object sender, EventArgs e)
         {
 
-           
+           updatefromonload();
             Watcher = new GeoCoordinateWatcher();
             // Catch the StatusChanged event.
             Watcher.StatusChanged += Watcher_StatusChanged;
@@ -340,7 +360,6 @@ namespace WeatherForecast
                         new ObservablePoint(getDate(hourlyForecastInfo.hourly[20].dt).Hour,hourlyForecastInfo.hourly[20].temp),
                         },
                         PointGeometrySize = 40
-
                     }
                 };
             }

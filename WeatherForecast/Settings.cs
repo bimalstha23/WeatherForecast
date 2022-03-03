@@ -21,14 +21,6 @@ namespace WeatherForecast
         {
 
         }
-        void getImage()
-        {
-
-        }
-        void getFavSettings()
-        {
-
-        }
 
         private void checkBoxCelcius_CheckedChanged(object sender, EventArgs e)
         {
@@ -105,7 +97,6 @@ namespace WeatherForecast
         {
             getSettings();
             setSettings();
-            
         }
     }
 }

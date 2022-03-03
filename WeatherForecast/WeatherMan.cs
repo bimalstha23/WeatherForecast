@@ -20,6 +20,8 @@ namespace WeatherForecast
         public  double deviceLon;
         public  double deviceLat;
         public string deviceLocation;
+        public string tempratureMeter;
+        public string S = "C";
         private GeoCoordinateWatcher Watcher = null;
         public WeatherMan()
         {
@@ -97,13 +99,13 @@ namespace WeatherForecast
 
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid={2}", Lat, Lon, APIkey);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units={2}&appid={3}", Lat, Lon,tempratureMeter, APIkey);
 
                 var json = web.DownloadString(url);
                 WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                 currentweathericon.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
                 lblHumidity.Text = Info.main.humidity.ToString();
-                lblTemp.Text = Convert.ToInt32(Info.main.temp).ToString();
+                lblTemp.Text = Convert.ToInt32(Info.main.temp).ToString() + "°" + S;
                 lblVisibility.Text = Info.visibility.ToString();
                 lblCountry.Text = Info.sys.country;
                 lblCityname.Text = Info.name;
@@ -115,6 +117,16 @@ namespace WeatherForecast
 
         private void WeatherMan_Load_1(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.tempratureStatusCelcius == true)
+            {
+                S = "C";
+                tempratureMeter = "metric";
+            }
+            else
+            {
+                S = "F";
+                tempratureMeter = "imperial";
+            }
             Watcher = new GeoCoordinateWatcher();
             // Catch the StatusChanged event.
             Watcher.StatusChanged += Watcher_StatusChanged;
