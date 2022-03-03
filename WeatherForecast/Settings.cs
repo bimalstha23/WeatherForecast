@@ -97,6 +97,8 @@ namespace WeatherForecast
         {
             getSettings();
             setSettings();
+           /* WeatherMan weatherform = new WeatherMan();
+            weatherform.updateweather(weatherform.deviceLon,weatherform.deviceLat);*/
         }
     }
 }

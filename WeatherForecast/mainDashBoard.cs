@@ -31,6 +31,7 @@ namespace WeatherForecast
         public double deviceLon;
         public double deviceLat;
         public string tempratureMeter;
+        public string S = "C";
         private GeoCoordinateWatcher Watcher = null;
         public mainDashBoard()
         {
@@ -45,48 +46,54 @@ namespace WeatherForecast
             favLoc4.Text = favFourthLocation;
             favLoc5.Text = favFifthLocation;
             if (Properties.Settings.Default.tempratureStatusCelcius == true)
+            {
+                S = "C";
                 tempratureMeter = "metric";
+            }
             else
+            {
+                S = "F";
                 tempratureMeter = "imperial";
+            }
         }
         void updateForecast(double Lon, double Lat)
         {
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,hourly,alerts&units=metric&appid={2}", Lat, Lon, api);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,hourly,alerts&units={2}&appid={3}", Lat, Lon,tempratureMeter, api);
                 var json = web.DownloadString(url);
                 Weatherforecast.ForecastInfo ForecastInfo = JsonConvert.DeserializeObject<Weatherforecast.ForecastInfo>(json);
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[0].weather[0].icon + ".png";
                 lblDate1.Text = getDate(ForecastInfo.daily[0].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[0].dt).ToString("ddd");
-                lbltemp1.Text = ForecastInfo.daily[0].temp.max.ToString() + "/" + ForecastInfo.daily[0].temp.min.ToString();
+                lbltemp1.Text = ForecastInfo.daily[0].temp.max.ToString() + "/" + ForecastInfo.daily[0].temp.min.ToString() + "°" + S;
 
                 WeatherIcon2.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[1].weather[0].icon + ".png";
                 lblDate2.Text = getDate(ForecastInfo.daily[1].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[1].dt).ToString("ddd");
-                lblTemp2.Text = ForecastInfo.daily[1].temp.max.ToString() + "/" + ForecastInfo.daily[1].temp.min.ToString();
+                lblTemp2.Text = ForecastInfo.daily[1].temp.max.ToString() + "/" + ForecastInfo.daily[1].temp.min.ToString() + "°" + S;
 
                 WeatherIcon3.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[2].weather[0].icon + ".png";
                 lblDate3.Text = getDate(ForecastInfo.daily[2].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[2].dt).ToString("ddd");
-                lblTemp3.Text = ForecastInfo.daily[2].temp.max.ToString() + "/" + ForecastInfo.daily[2].temp.min.ToString();
+                lblTemp3.Text = ForecastInfo.daily[2].temp.max.ToString() + "/" + ForecastInfo.daily[2].temp.min.ToString() + "°" + S;
 
                 WeatherIcon4.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[3].weather[0].icon + ".png";
                 lblDate4.Text = getDate(ForecastInfo.daily[3].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[3].dt).ToString("ddd");
-                lblTemp4.Text = ForecastInfo.daily[3].temp.max.ToString() + "/" + ForecastInfo.daily[3].temp.min.ToString();
+                lblTemp4.Text = ForecastInfo.daily[3].temp.max.ToString() + "/" + ForecastInfo.daily[3].temp.min.ToString() + "°" + S;
 
                 WeatherIcon5.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[4].weather[0].icon + ".png";
                 lblDate5.Text = getDate(ForecastInfo.daily[4].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[4].dt).ToString("ddd");
-                lblTemp5.Text = ForecastInfo.daily[4].temp.max.ToString() + "/" + ForecastInfo.daily[4].temp.min.ToString();
+                lblTemp5.Text = ForecastInfo.daily[4].temp.max.ToString() + "/" + ForecastInfo.daily[4].temp.min.ToString() + "°" + S;
 
                 WeatherIcon6.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[5].weather[0].icon + ".png";
                 lblDate6.Text = getDate(ForecastInfo.daily[5].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[5].dt).ToString("ddd");
-                lblTemp6.Text = ForecastInfo.daily[5].temp.max.ToString() + "/" + ForecastInfo.daily[5].temp.min.ToString();
+                lblTemp6.Text = ForecastInfo.daily[5].temp.max.ToString() + "/" + ForecastInfo.daily[5].temp.min.ToString() + "°" + S;
 
                 WeatherIcon7.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[6].weather[0].icon + ".png";
                 lblDate7.Text = getDate(ForecastInfo.daily[6].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[6].dt).ToString("ddd");
-                lblTemp7.Text = ForecastInfo.daily[6].temp.max.ToString() + "/" + ForecastInfo.daily[6].temp.min.ToString();
+                lblTemp7.Text = ForecastInfo.daily[6].temp.max.ToString() + "/" + ForecastInfo.daily[6].temp.min.ToString() + "°" + S;
                 
                 WeatherIcon8.ImageLocation = "https://openweathermap.org/img/w/" + ForecastInfo.daily[7].weather[0].icon + ".png";
                 lblDate8.Text = getDate(ForecastInfo.daily[7].dt).ToString("dd") + " " + getDate(ForecastInfo.daily[7].dt).ToString("ddd");
-                lblTemp8.Text = ForecastInfo.daily[7].temp.max.ToString() + "/" + ForecastInfo.daily[7].temp.min.ToString();
+                lblTemp8.Text = ForecastInfo.daily[7].temp.max.ToString() + "/" + ForecastInfo.daily[7].temp.min.ToString() + "°" + S;
 
             }
         }
@@ -95,40 +102,40 @@ namespace WeatherForecast
         {
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&units=metric&appid={2}", Lat, Lon, api);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&units={2}&appid={3}", Lat, Lon,tempratureMeter, api);
                 var json = web.DownloadString(url);
                 hourlyForecast.HourlyForecast hourlyForecastInfo = JsonConvert.DeserializeObject<hourlyForecast.HourlyForecast>(json);
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[0].weather[0].icon + ".png";
                 lblDate1.Text = getDate(hourlyForecastInfo.hourly[0].dt).ToString("HH:mm");
-                lbltemp1.Text = hourlyForecastInfo.hourly[0].temp.ToString();
+                lbltemp1.Text = hourlyForecastInfo.hourly[0].temp.ToString() + "°" + S;
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[2].weather[0].icon + ".png";
                 lblDate2.Text = getDate(hourlyForecastInfo.hourly[2].dt).ToString("HH:mm");
-                lblTemp2.Text = hourlyForecastInfo.hourly[2].temp.ToString();
+                lblTemp2.Text = hourlyForecastInfo.hourly[2].temp.ToString() + "°" + S;
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[5].weather[0].icon + ".png";
                 lblDate3.Text = getDate(hourlyForecastInfo.hourly[5].dt).ToString("HH:mm");
-                lblTemp3.Text = hourlyForecastInfo.hourly[5].temp.ToString();
+                lblTemp3.Text = hourlyForecastInfo.hourly[5].temp.ToString() + "°" + S;
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[8].weather[0].icon + ".png";
                 lblDate4.Text = getDate(hourlyForecastInfo.hourly[8].dt).ToString("HH:mm");
-                lblTemp4.Text = hourlyForecastInfo.hourly[8].temp.ToString();
+                lblTemp4.Text = hourlyForecastInfo.hourly[8].temp.ToString() + "°" + S;
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[11].weather[0].icon + ".png";
                 lblDate5.Text = getDate(hourlyForecastInfo.hourly[11].dt).ToString("HH:mm");
-                lblTemp5.Text = hourlyForecastInfo.hourly[11].temp.ToString();
+                lblTemp5.Text = hourlyForecastInfo.hourly[11].temp.ToString() + "°" + S;
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[14].weather[0].icon + ".png";
                 lblDate6.Text = getDate(hourlyForecastInfo.hourly[14].dt).ToString("HH:mm");
-                lblTemp6.Text = hourlyForecastInfo.hourly[14].temp.ToString();
+                lblTemp6.Text = hourlyForecastInfo.hourly[14].temp.ToString() + "°" + S;
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[17].weather[0].icon + ".png";
                 lblDate7.Text = getDate(hourlyForecastInfo.hourly[17].dt).ToString("HH:mm");
-                lblTemp7.Text = hourlyForecastInfo.hourly[17].temp.ToString();
+                lblTemp7.Text = hourlyForecastInfo.hourly[17].temp.ToString() + "°" + S;
 
                 WeatherIcon1.ImageLocation = "https://openweathermap.org/img/w/" + hourlyForecastInfo.hourly[20].weather[0].icon + ".png";
                 lblDate8.Text = getDate(hourlyForecastInfo.hourly[20].dt).ToString("HH:mm");
-                lblTemp8.Text = hourlyForecastInfo.hourly[20].temp.ToString();
+                lblTemp8.Text = hourlyForecastInfo.hourly[20].temp.ToString() + "°" + S;
             }
         }
         DateTime getDate(double millisecound)
@@ -145,7 +152,7 @@ namespace WeatherForecast
             {
                 try
                 {
-                    string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&appid={1}", text, api);
+                    string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units={1}&appid={2}", text,tempratureMeter, api);
                     var json = web.DownloadString(url);
                     WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                     lon = Info.coord.lon;
@@ -166,7 +173,7 @@ namespace WeatherForecast
             {
                 try
                 {
-                    string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&appid={1}", cityName, api);
+                    string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units={1}&appid={2}", cityName,tempratureMeter, api);
                     var json = web.DownloadString(url);
                     WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                     lon = Info.coord.lon;
@@ -184,8 +191,7 @@ namespace WeatherForecast
         }
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            WeatherMan mainForm;
-            mainForm = (WeatherMan)this.FindForm();
+            
             if (e.KeyCode == Keys.Enter)
             {
                 //Perform search
@@ -195,7 +201,7 @@ namespace WeatherForecast
                 {
                     try
                     {
-                        string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&appid={1}", cityName,mainForm.APIkey);
+                        string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units={1}&appid={2}", cityName,tempratureMeter, api);
                         var json = web.DownloadString(url);
                         WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                         lon = Info.coord.lon;
@@ -275,7 +281,7 @@ namespace WeatherForecast
 
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid={2}", Lat, Lon, api);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units={2}&appid={3}", Lat, Lon,tempratureMeter, api);
 
                 var json = web.DownloadString(url);
                 WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
@@ -310,7 +316,7 @@ namespace WeatherForecast
         {
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,hourly,alerts&units=metric&appid={2}", Lat, Lon, api);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,hourly,alerts&units={2}&appid={3}", Lat, Lon,tempratureMeter ,api);
                 var json = web.DownloadString(url);
                 Weatherforecast.ForecastInfo ForecastInfo = JsonConvert.DeserializeObject<Weatherforecast.ForecastInfo>(json);
                 cartesianChart1.Series = new SeriesCollection
@@ -340,7 +346,7 @@ namespace WeatherForecast
         {
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&units=metric&appid={2}", Lat, Lon, api);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=current,minutely,daily,alerts&units={2}&appid={3}", Lat, Lon,tempratureMeter, api);
                 var json = web.DownloadString(url);
                 hourlyForecast.HourlyForecast hourlyForecastInfo = JsonConvert.DeserializeObject<hourlyForecast.HourlyForecast>(json);
                 cartesianChart1.Series = new SeriesCollection

@@ -94,7 +94,7 @@ namespace WeatherForecast
                 }
             }
         }
-        void updateweather(double Lon, double Lat)
+       public void updateweather(double Lon, double Lat)
         {
 
             using (WebClient web = new WebClient())

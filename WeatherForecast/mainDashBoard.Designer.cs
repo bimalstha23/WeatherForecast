@@ -121,7 +121,7 @@
             this.guna2Panel8.Location = new System.Drawing.Point(747, 236);
             this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel8.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel8.TabIndex = 40;
             // 
             // lblDate8
@@ -149,7 +149,7 @@
             this.WeatherIcon8.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon8.Image")));
             this.WeatherIcon8.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon8.Name = "WeatherIcon8";
-            this.WeatherIcon8.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon8.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon8.TabIndex = 9;
             this.WeatherIcon8.TabStop = false;
             // 
@@ -345,7 +345,7 @@
             this.guna2Panel7.Location = new System.Drawing.Point(21, 236);
             this.guna2Panel7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel7.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel7.TabIndex = 39;
             // 
             // lblDate1
@@ -374,7 +374,7 @@
             this.WeatherIcon1.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon1.Image")));
             this.WeatherIcon1.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon1.Name = "WeatherIcon1";
-            this.WeatherIcon1.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon1.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon1.TabIndex = 4;
             this.WeatherIcon1.TabStop = false;
             // 
@@ -387,7 +387,7 @@
             this.guna2Panel6.Location = new System.Drawing.Point(122, 236);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel6.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel6.TabIndex = 38;
             // 
             // lblDate2
@@ -416,7 +416,7 @@
             this.WeatherIcon2.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon2.Image")));
             this.WeatherIcon2.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon2.Name = "WeatherIcon2";
-            this.WeatherIcon2.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon2.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon2.TabIndex = 5;
             this.WeatherIcon2.TabStop = false;
             // 
@@ -429,7 +429,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(327, 236);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel2.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel2.TabIndex = 37;
             // 
             // lblDate4
@@ -458,7 +458,7 @@
             this.WeatherIcon4.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon4.Image")));
             this.WeatherIcon4.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon4.Name = "WeatherIcon4";
-            this.WeatherIcon4.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon4.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon4.TabIndex = 7;
             this.WeatherIcon4.TabStop = false;
             // 
@@ -471,7 +471,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(433, 236);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel3.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel3.TabIndex = 36;
             // 
             // lblDate5
@@ -500,7 +500,7 @@
             this.WeatherIcon5.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon5.Image")));
             this.WeatherIcon5.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon5.Name = "WeatherIcon5";
-            this.WeatherIcon5.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon5.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon5.TabIndex = 8;
             this.WeatherIcon5.TabStop = false;
             // 
@@ -513,7 +513,7 @@
             this.guna2Panel4.Location = new System.Drawing.Point(541, 236);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel4.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel4.TabIndex = 35;
             // 
             // lblDate6
@@ -542,7 +542,7 @@
             this.WeatherIcon6.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon6.Image")));
             this.WeatherIcon6.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon6.Name = "WeatherIcon6";
-            this.WeatherIcon6.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon6.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon6.TabIndex = 8;
             this.WeatherIcon6.TabStop = false;
             // 
@@ -555,7 +555,7 @@
             this.guna2Panel5.Location = new System.Drawing.Point(648, 236);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel5.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel5.TabIndex = 34;
             // 
             // lblDate7
@@ -584,7 +584,7 @@
             this.WeatherIcon7.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon7.Image")));
             this.WeatherIcon7.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon7.Name = "WeatherIcon7";
-            this.WeatherIcon7.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon7.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon7.TabIndex = 9;
             this.WeatherIcon7.TabStop = false;
             // 
@@ -597,7 +597,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(225, 236);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(65, 74);
+            this.guna2Panel1.Size = new System.Drawing.Size(81, 74);
             this.guna2Panel1.TabIndex = 33;
             // 
             // lblDate3
@@ -626,7 +626,7 @@
             this.WeatherIcon3.Image = ((System.Drawing.Image)(resources.GetObject("WeatherIcon3.Image")));
             this.WeatherIcon3.Location = new System.Drawing.Point(0, 0);
             this.WeatherIcon3.Name = "WeatherIcon3";
-            this.WeatherIcon3.Size = new System.Drawing.Size(65, 33);
+            this.WeatherIcon3.Size = new System.Drawing.Size(81, 33);
             this.WeatherIcon3.TabIndex = 6;
             this.WeatherIcon3.TabStop = false;
             // 
